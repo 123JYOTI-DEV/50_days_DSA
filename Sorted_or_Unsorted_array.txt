@@ -1,0 +1,22 @@
+//Question - Check given array is sorted or unsorted 
+
+public class Sorted_Unsorted {
+    public static boolean check_sorted(int[] arr,int index){
+        if(index >= arr.length){
+            return true;
+        }
+        if(arr[index]<arr[index-1]){
+            return false;
+        }
+
+        return check_sorted(arr,index+1);
+
+
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2,3,7,1};
+        System.out.println("Result is : " + check_sorted(arr,1));
+
+    }
+}
