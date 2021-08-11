@@ -1,0 +1,41 @@
+/* This program will find the power of the number
+* for Example :- m^n =m multiplied by n times
+*                2^3 = 2*2*2 = 8 ans*
+1:- Firstly it will take user input for base number and exponent then evaluate it according to condition and find the solution
+ */
+
+import java.util.*;
+public class Power_Using_Recursion {
+    public static int Find_Power(int m , int n){
+        if(n<0 || m <0){
+            System.out.println("Invalid input");
+            return -1;
+        }
+        if(n==0){
+            return 1;
+        }
+        if(n%2==0){
+            return Find_Power(m*m,n/2);
+        }
+        return m*Find_Power(m*m,(n-1)/2);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the base number : ");
+        int base = sc.nextInt();
+        System.out.print("Enter Exponent : ");
+        int exponent = sc.nextInt();
+        System.out.println( base + " to the power " + exponent + " is : " + Find_Power(+base,exponent));
+
+    }
+}
+
+
+
+OUTPUT :- 
+
+Enter the base number : 4
+Enter Exponent : 2
+4 to the power 2 is : 16
+
+Process finished with exit code 0
