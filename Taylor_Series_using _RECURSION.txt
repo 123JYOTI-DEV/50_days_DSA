@@ -1,0 +1,32 @@
+/*This program is for TAYLOR SERIES using RECURSION 
+* Formula for TAYLOR SERIES is :- 1+ x/1 + x*x/2*1 + x*x*x/ 3*2*1  + x*x*x*x / 4*3*2*1 + .......n
+*
+*/
+
+
+public class Taylor_Series {
+    static double numerator = 1;
+    static double denominator = 1;
+    static double term ;
+    public static double taylor(int x , int n){
+        if(n==0){
+            return 1;
+        }
+        else{
+            term = taylor(x,n-1);
+            numerator *= x;
+            denominator *= n;
+            return (term + (numerator/denominator));
+        }
+
+
+    }
+    public static void main(String[] args) {
+        System.out.println(taylor(1,10));
+        
+    }
+}
+
+
+
+
