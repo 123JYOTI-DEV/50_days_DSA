@@ -1,0 +1,33 @@
+//Tower of hanoi using RECURSION 
+
+/* Tower of hanoi is teh problem where we have given three rods and some plates on it and
+* having rod A as initial destination e have to mover all the plates to final destination
+* i.e., rod c with the help of  rod B */
+
+public class Tower_of_Hanoi1 {
+    public static void tower(int n, char a, char b , char c){
+        if(n>0){
+            tower(n-1,a,c,b) ;//move the n-1 plates from rod a to b with the help of c
+            System.out.println("Move from " + a + " to " + c );
+            tower(n-1,b,a,c); // moving the remaining plates from B to C with the help of A
+        }
+    }
+    public static void main(String[] main){
+        tower(3,'A','B' , 'C');
+
+    }
+
+}
+
+
+OUTPUT :-
+
+          Move from A to C
+          Move from A to B
+          Move from C to B
+          Move from A to C
+          Move from B to A
+          Move from B to C
+          Move from A to C
+
+Process finished with exit code 0
