@@ -1,0 +1,42 @@
+//combination using RECURSION
+
+//This program will take user input to find the Combination and return result  and for invalid input it will return -1
+
+
+
+import java.util.*;
+public class Combination {
+    public static int combination_nCr(int n , int r){
+        if(n<0 || r<0){
+            return -1;
+        }
+        if(n==r || r==0){
+            return 1;
+        }
+        else{
+
+            return (combination_nCr(n-1,r-1) + combination_nCr(n-1,r));
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter n value : ");
+        int n = sc.nextInt();
+        System.out.println("Enter r value : ");
+        int r = sc.nextInt();
+        System.out.println("Result : ");
+        System.out.println(combination_nCr(n,r));
+
+    }
+}
+
+
+OUTPUT :- 
+          Enter n value : 
+          3
+          Enter r value : 
+          1
+          Result : 
+          3
+
+Process finished with exit code 0
