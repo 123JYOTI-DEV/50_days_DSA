@@ -1,0 +1,37 @@
+//This program will return the boolean value for the number is prime or not
+public class Prime_number {
+    public static boolean is_prime(int n){
+        if(n<=1){
+            return false;
+        }
+        else if(n==2){
+            return true;
+        }
+        //checking for even numbers
+        else if(n%2==0){
+            return false;
+        }
+        //checking for odd numbers
+        for(int i =3;i<=Math.sqrt(n) ; i+= 2)
+        {
+            if(n%i==0)
+                return false;
+
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        if(is_prime(21)){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+        
+    }
+}
+
+OUTPUT-
+         false
+
+        Process finished with exit code 0
