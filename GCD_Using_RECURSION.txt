@@ -1,0 +1,30 @@
+/* This program will return the Greatest Common Divisor of the Given Input using RECURSION  */
+
+import java.util.*;
+public class GCD_using_Recursion {
+    public static int GCD(int a , int b){
+        if(b==0){
+            return a;
+        }
+        return GCD(b,a%b);
+    }
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the values to find GCD ");
+        System.out.print("value of a : ");
+        int a = sc.nextInt();
+        System.out.print("value of b : ");
+        int b = sc.nextInt();
+        System.out.println("GCD of the given number " + a + " and " + b + " is : " + GCD(a,b));
+
+
+    }
+}
+
+OUTPUT:- 
+         Enter the values to find GCD 
+         value of a : 35
+         value of b : 21
+         GCD of the given number 35 and 21 is : 7
+
+         Process finished with exit code 0
