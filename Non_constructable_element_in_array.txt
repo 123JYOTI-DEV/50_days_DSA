@@ -1,0 +1,35 @@
+/*This program will retrun the smallest non contructable from an array 
+
+*for example = arr{1,4,6,7}
+so here 2 is smallest non contructable element  this array 
+
+*/
+
+
+
+public class Array1 {
+    public static int construct(int arr[] , int n){
+        int result=1;//smallest non constructable element is 1 so initialize result with 1
+        for(int i=0;i<n&&arr[i]<=result;i++){
+            result = result+arr[i];
+        }
+        return result;
+
+    }
+    public static void main(String[] args) {
+        int arr[]={1,2,5,6,8,9};
+        int n = arr.length;
+        int res=construct(arr,n);
+        System.out.println("Smallest Non contructable element from the sorted array subset is : " + res);
+
+    }
+}
+
+
+
+
+OUTPUT- 
+
+Smallest Non contructable element from the sorted array subset is : 4
+
+Process finished with exit code 0
