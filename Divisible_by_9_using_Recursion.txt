@@ -1,0 +1,35 @@
+/* this program will take user input and check the number  is divisible by 9 or not with the help
+*  of RECURSION function---> check () and if the number is divisible by 9 this will return 1 otherwise it will return 0 */
+
+import java.util.*;
+public class check_divisible_by_9 {
+    public static int check(int n){
+        int sum_of_digits =0  ;
+        if(n==9){
+            return 1;
+        }
+        if(n<9){
+            return 0;
+        }
+        while(n>0){
+            sum_of_digits += n%10;
+            n/=10;
+        }
+        return check(sum_of_digits);
+
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print(" Enter number to check: " );
+        int num = sc.nextInt();
+        System.out.println(check(num));
+
+    }
+}
+
+OUTPUT :-
+
+ Enter number to check: 4968589
+ 0
+
+ Process finished with exit code 0
