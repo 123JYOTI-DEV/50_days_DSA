@@ -1,0 +1,44 @@
+//This program will take the user input and return 1 if the number is divisible 
+// otherwise it will return 0 based on the function check() ----RECURSIVELY
+
+import java.util.*;
+public class Divisible_by_11 {
+    public static int check(int n){
+        int sum1 = 0;
+        int sum2 = 0;
+        int diff;
+        if(n==0){
+            return 1;
+        }
+        if(n<10){
+            return 0;
+        }
+        while(n>0){
+            sum1 += n%10;
+            n /= 10;
+            sum2 += n%10;
+            n/= 10;
+
+        }
+        diff = sum1>sum2 ? (sum1-sum2) :(sum1-sum2);
+        return check(diff);
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number :");
+        int num = sc.nextInt();
+        System.out.println(check(num));
+
+
+
+    }
+}
+
+OUTPUT-
+ Enter number :96
+ 0
+ Enter number :55
+ 1
+
+
+Process finished with exit code 0
