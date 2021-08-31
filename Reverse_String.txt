@@ -1,0 +1,38 @@
+ //This program will take a string form user and print it's reverse without using the extra space
+ //This program will perform all the operation in the existing array only and return it's  reverse
+import java.util.*;
+public class Reverse_the_input_String {
+    public static void reverse(char[] arr){
+        int left =0;
+        int right = arr.length-1;
+        while(left<right){
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] =temp;
+
+            left+=1;
+            right-=1;
+        }
+        System.out.println(arr);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter string: ");
+        String c = sc.next();
+        System.out.println("Reversed form : ");
+        //Changing the String to Character array
+        char[] arr =c.toCharArray();
+        reverse(arr);
+        
+    }
+}
+
+
+OUTPUT-
+
+enter string: Elephant
+
+Reversed form : tnahpelE
+
+
+Process finished with exit code 0
