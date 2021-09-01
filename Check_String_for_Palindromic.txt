@@ -1,0 +1,34 @@
+//This program will check  after reversing the given string whether it is palindromic
+// or not if it is then it will return true otherwise return false
+
+package Leet_code_and_elements_of_Programming;
+import java.util.*;
+public class Reverse_check {
+    public static boolean Palindromic(char[] s){
+        int n =s.length;
+        for(int i =0,j=n-1;i<j;++i,--j){
+            //Check for palindromic
+            if(s[i] != s[j])
+            {
+                return false;
+            }
+
+        }
+
+        return true;
+    }
+    public static void main(String[] args){
+
+        System.out.print("Is the given String palindromic : " );
+        char[] string ={'j','y','o','t','i'};
+        System.out.println(Palindromic(string));
+
+    }
+}
+
+
+OUTPUT:-
+
+  Is the given String palindromic : false
+
+  Process finished with exit code 0
