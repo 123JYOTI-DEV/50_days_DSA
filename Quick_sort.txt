@@ -1,0 +1,62 @@
+public class Quick_Sort {
+
+    public static void sort(int arr[]){
+        int size=arr.length;
+        sort1(arr,0,size-1);
+
+    }
+    public static void sort1(int arr[],int start,int end){  //helper method
+        if(start>=end){
+            return;
+        }
+        int pivot =start;
+        int left =start+1;
+        int right =end;
+
+        while(right>=left){
+            if(arr[left]>arr[pivot] && arr[right]<arr[pivot]){
+                int temp=arr[left];
+                arr[left]=arr[right];
+                arr[right]=temp;
+            }
+
+            if(arr[left]<=arr[pivot]){
+                left=left+1;
+            }
+
+            if(arr[right]>=arr[pivot]){
+                right=right-1;
+            }
+        }
+        int temp1=arr[pivot];
+        arr[pivot]=arr[right];
+        arr[right]=temp1;
+
+        sort1(arr,start,right-1);
+        sort1(arr,right+1,end);
+
+
+
+        }
+    public static void printArray(int arr[]){
+        int n = arr.length;
+        for(int i =0;i<n;i++){
+            System.out.print(arr[i] + " ");
+
+        }
+
+
+    }
+    public static void main(String[] args) {
+        int arr[]={7,2,4,5,1,6,3};
+        sort(arr);
+        System.out.print("sorted array : " );
+        printArray(arr);
+
+    }
+}
+
+
+OUTPUT:-
+sorted array : 1 2 3 4 5 6 7 
+Process finished with exit code 0
