@@ -1,0 +1,33 @@
+package Dsa_Practical;
+
+public class Linear_search1 {
+    public static  int search(int array[] , int value){
+        int size =array.length;
+        for(int i =0;i<size-1;i++){
+            if(array[i]==value){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        int array[] = {10,34,6,8,20,7};
+        int value=8;
+        int result = search(array,value);
+        if(result==-1){
+            System.out.println("Element not found in the array ");
+        }
+        else{
+            System.out.println("Element found at index : " + result);
+        }
+
+
+    }
+}
+
+output:-
+
+Element found at index : 3
+
+Process finished with exit code 0
