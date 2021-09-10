@@ -1,0 +1,27 @@
+import java.util.*;
+public class spelling {
+    public static void printspell(int n , String[] arr){
+        if(n==0){
+            return;
+        }
+        printspell(n/10,arr);
+        System.out.print(arr[n%10] + " ");
+
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String[] arr = {"zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+        System.out.println("Enter the number to convert in words: ");
+        int n = sc.nextInt();
+        System.out.println("Answer is :");
+
+        printspell(n,arr);
+    }
+}
+
+OUTPUT:-
+Enter the number to convert in words: 
+23
+Answer is :
+Two Three 
+Process finished with exit code 0
