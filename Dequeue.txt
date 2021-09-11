@@ -1,0 +1,117 @@
+import java.util.*;
+public class DequeE1{
+    public static void main(String...args){
+        Deque<String> dq = new ArrayDeque<String>();
+        dq.offerFirst("A");
+        dq.offerLast("B");
+        dq.addFirst("C");
+        dq.addLast("D");
+        dq.addLast("E");
+        dq.addFirst("F");
+        dq.offerFirst("G");
+        dq.offerLast("H");
+        dq.offerFirst("I");
+        System.out.println("------------------ArrayDeque-----------------");
+        for(String s:dq){
+            System.out.println(s);
+        }
+
+        dq.pollLast();
+        dq.pollFirst();
+        System.out.println("------------------after deleting some values using poll ------------------");
+        Iterator itr = dq.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
+        dq.removeLast();
+        dq.removeFirst();
+        System.out.println("------------------after deleting some values using remove ------------------");
+        Iterator itr2 = dq.iterator();
+        while(itr2.hasNext()){
+            System.out.println(itr2.next());
+        }
+        System.out.println("First vaule in deque : "+dq.peekFirst());
+        System.out.println("getFirst() : "+dq.getFirst());
+        System.out.println("getLast() : "+dq.getLast());
+        System.out.println("peekLast () : "+dq.peekLast());
+
+    }
+}
+import java.util.*;
+public class DequeE1{
+    public static void main(String...args){
+        Deque<String> dq = new ArrayDeque<String>();
+        dq.offerFirst("A");
+        dq.offerLast("B");
+        dq.addFirst("C");
+        dq.addLast("D");
+        dq.addLast("E");
+        dq.addFirst("F");
+        dq.offerFirst("G");
+        dq.offerLast("H");
+        dq.offerFirst("I");
+        System.out.println("------------------ArrayDeque-----------------");
+        for(String s:dq){
+            System.out.println(s);
+        }
+
+        dq.pollLast();
+        dq.pollFirst();
+        System.out.println("------------------after deleting some values using poll ------------------");
+        Iterator itr = dq.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
+        dq.removeLast();
+        dq.removeFirst();
+        System.out.println("------------------after deleting some values using remove ------------------");
+        Iterator itr2 = dq.iterator();
+        while(itr2.hasNext()){
+            System.out.println(itr2.next());
+        }
+        System.out.println("First vaule in deque : "+dq.peekFirst());
+        System.out.println("getFirst() : "+dq.getFirst());
+        System.out.println("getLast() : "+dq.getLast());
+        System.out.println("peekLast () : "+dq.peekLast());
+
+    }
+}
+import java.util.*;
+public class DequeE1{
+    public static void main(String...args){
+        Deque<String> dq = new ArrayDeque<String>();
+        dq.offerFirst("A");
+        dq.offerLast("B");
+        dq.addFirst("C");
+        dq.addLast("D");
+        dq.addLast("E");
+        dq.addFirst("F");
+        dq.offerFirst("G");
+        dq.offerLast("H");
+        dq.offerFirst("I");
+        System.out.println("------------------ArrayDeque-----------------");
+        for(String s:dq){
+            System.out.println(s);
+        }
+
+        dq.pollLast();
+        dq.pollFirst();
+        System.out.println("------------------after deleting some values using poll ------------------");
+        Iterator itr = dq.iterator();
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
+        dq.removeLast();
+        dq.removeFirst();
+        System.out.println("------------------after deleting some values using remove ------------------");
+        Iterator itr2 = dq.iterator();
+        while(itr2.hasNext()){
+            System.out.println(itr2.next());
+        }
+        System.out.println("First vaule in deque : "+dq.peekFirst());
+        System.out.println("getFirst() : "+dq.getFirst());
+        System.out.println("getLast() : "+dq.getLast());
+        System.out.println("peekLast () : "+dq.peekLast());
+
+    }
+}
