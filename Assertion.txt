@@ -1,0 +1,21 @@
+//ASSERTION EXAMPLE
+
+import java.util.Scanner;
+public class AssertionExample {
+    public static void main(String args[]){
+        Scanner s =new Scanner(System.in);
+        System.out.println("enter your age");
+        int value=s.nextInt();
+        assert value>=18:"Not Valid";
+        System.out.println("value is" + value);
+
+    }
+}
+
+
+OUTPUT:-
+enter your age
+22
+value is22
+
+Process finished with exit code 0
