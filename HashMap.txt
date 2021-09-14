@@ -1,0 +1,54 @@
+import java.util.*;
+public class Hashmap_Example {
+    public static void main(String[] args){
+        HashMap<Integer,String>map=new HashMap<Integer,String>();
+       //Object put(Object key, Object value)
+
+        map.put(101,"Let us C");
+        map.put(102,"Operating System");
+        map.put(103,"Data Communication and Networking");
+        System.out.println("Values before remove: " +map);
+        map.remove(102);
+        System.out.println("Values after remove: " +map);
+
+        // Void clear method
+
+        HashMap<Integer,String>map1=new HashMap<Integer,String>();
+        map1.put(104,"Play");
+
+        System.out.println("Values are of map1:" +map1);
+
+        //Size method
+        System.out.println(map.size());
+
+        //Contains value method
+        System.out.println(map.containsValue("Let us C"));
+
+        //Contains Key
+        System.out.println(map.containsKey(104));
+
+        //Entry set
+        System.out.println(map.entrySet());
+
+        //Key set() method
+        System.out.println(map.keySet());
+
+        //is empty method()
+        System.out.println(map.isEmpty());
+
+    }
+}
+
+
+OUTPUT:-
+Values before remove: {101=Let us C, 102=Operating System, 103=Data Communication and Networking}
+Values after remove: {101=Let us C, 103=Data Communication and Networking}
+Values are of map1:{104=Play}
+2
+true
+false
+[101=Let us C, 103=Data Communication and Networking]
+[101, 103]
+false
+
+Process finished with exit code 0
