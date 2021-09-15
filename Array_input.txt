@@ -1,0 +1,28 @@
+package DSA_Prepration;
+import java.util.*;
+
+public class Array_size {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of Array : ");
+        int n = sc.nextInt();
+        int[] MyArray= new int[n];
+        for(int i =0;i<n;i++){
+            MyArray[i] = sc.nextInt();
+        }
+        System.out.println("Array : " + Arrays.toString(MyArray));
+    }
+}
+
+
+OUTPUT:-
+
+Enter the size of Array : 5
+1
+2
+3
+4
+5
+Array : [1, 2, 3, 4, 5]
+
+Process finished with exit code 0
