@@ -1,0 +1,46 @@
+//PostOrder TRAVERSAL OF THE BINARY TREE
+ 
+                (1)
+                / \ 
+              (2)  (3)
+                   /  
+                  /
+                 (4)
+
+
+//CODE
+
+class Node4{
+    int data;
+    Node4 left;
+    Node4 right;
+
+    public Node4(int key){
+        data = key;
+        left=right=null;
+    }
+    public static void PostOrder(Node4 node){
+        if(node== null){
+            return;
+        }
+        PostOrder(node.left);
+        PostOrder(node.right);
+        System.out.print(node.data + " ");
+    }
+}
+
+public class postOrderTraversal {
+    public static void main(String[] args) {
+        Node4 root = new Node4(1);
+        root.left = new Node4(2);
+        root.right = new Node4(3);
+        root.right.left = new Node4(5);
+        System.out.println("Post Order : ");
+        root.PostOrder(root);
+    }
+}
+
+
+OUTPUT:- 
+Post Order : 
+2 5 3 1 
