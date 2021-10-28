@@ -1,0 +1,46 @@
+PREORDER TRAVERSAL USING JAVA:- 
+output :-
+
+Preorder of the Tree is : 
+1 2 4 5 8 3 6 7 
+
+//Code
+
+
+class Node1{
+    int data;
+    Node1 left;
+    Node1 right;
+    Node1(int item){
+        data=item;
+        left=right=null;
+    }
+    public static void Preorder(Node1 node){
+        if(node == null){
+            return;
+        }
+        System.out.print(node.data + " ");
+        Preorder(node.left);
+        Preorder(node.right);
+
+
+    }
+
+}
+public class preOrderTraversal {
+    public static void main(String[] args) {
+        Node1 root = new Node1(1);
+        root.left = new Node1(2);
+        root.right = new Node1(3);
+        root.left.left = new Node1(4);
+        root.left.right = new Node1(5);
+        root.right.left = new Node1(6);
+        root.right.right = new Node1(7);
+        root.left.right.right = new Node1(8);
+        System.out.println("Preorder of the Tree is : " );
+        root.Preorder(root);
+
+
+
+    }
+}
