@@ -1,0 +1,40 @@
+//Level Order Traversal of Binary Tree
+
+package Dsa_Practical;
+import java.util.Queue;
+import java.util.LinkedList;
+class treeNode{
+    int data;
+    treeNode left;
+    treeNode right;
+    treeNode(int key){
+        data=key;
+    }
+}
+
+public class BinaryTree1 {
+    treeNode root;
+    void levelOrder(){
+        Queue<treeNode> queue = new LinkedList<treeNode>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            treeNode tmp = queue.poll();
+            System.out.print(tmp.data + " ");
+            if(tmp.left != null){ queue.add(tmp.left); }
+            if(tmp.right!= null){ queue.add(tmp.right);}
+        }
+    }
+    public static void main(String[] args) {
+        BinaryTree1 level = new BinaryTree1();
+        level.root = new treeNode(1);
+        level.root.left = new treeNode(2);
+        level.root.right= new treeNode(3);
+        level.root.left.right= new treeNode(5);
+        level.root.left.left= new treeNode(4);
+        System.out.println("Level order (BFS) : ");
+        level.levelOrder();
+
+
+
+    }
+}
