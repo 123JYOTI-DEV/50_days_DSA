@@ -1,0 +1,43 @@
+//Breadth first Search(BFS) of binary tree--Java implementation
+
+
+package Dsa_Practical;
+import java.util.LinkedList;
+import java.util.Queue;
+class Node{
+    int data;
+    Node left;
+    Node right;
+    Node(int item){
+        data = item;
+        left=right=null;
+    }
+}
+public class levelOrder {
+    Node root;
+    void level(){
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node tmp = queue.poll();
+            System.out.print(tmp.data + " ");
+            if(tmp.left != null){
+                queue.add(tmp.left);
+            }
+            if(tmp.right!=null){
+                queue.add(tmp.right);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        levelOrder bfs = new levelOrder();
+        bfs.root = new Node(1);
+        bfs.root.left = new Node(2);
+        bfs.root.right = new Node(3);
+        bfs.root.left.left= new Node(4);
+        bfs.root.right.right = new Node(5);
+        System.out.println("LevelOrder : ");
+        bfs.level();
+
+    }
+}
