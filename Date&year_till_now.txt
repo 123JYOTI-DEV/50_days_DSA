@@ -1,0 +1,11 @@
+//Calculating time and year passed till now :-  
+
+public class Lec_96_Date_Time {
+    public static void main(String[] args) {
+        System.out.println("Milliseconds passed till now : " + System.currentTimeMillis());
+        //returns how many milli second passed since ist jan 1970 till now
+
+        // We can also calculate how many years passes since 1st jan 1970
+        System.out.println("Year passed till now is : " + System.currentTimeMillis() / 1000 / 3600 / 24 / 365);
+    }
+}
