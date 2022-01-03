@@ -1,0 +1,30 @@
+//Question 
+Check Number is even or not :- 
+-------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Even_or_odd {
+    public static boolean isEven(int a){
+        //and operation wit any number return true then it's odd
+        if((a&1)==1){
+            return false;
+        }
+        return true;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number to check: ");
+        int a = sc.nextInt();
+        boolean result = isEven(a);
+        System.out.println(a + " is a even number : " + result );
+    }
+}
+--------------------------------------------------------------------------------
+
+//Output 
+
+Enter number to check: 25
+25 is a even number : false
+
+Process finished with exit code 0
