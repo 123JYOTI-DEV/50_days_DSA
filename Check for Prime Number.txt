@@ -1,0 +1,34 @@
+//Check for Number is Prime or Not 
+-----------------------------------------------------------------------
+
+
+
+import java.util.Scanner;
+
+public class isPrime {
+    public static  boolean checkPrime(int n){
+        boolean ans =true;
+        for(int i=2;i<n;i++){
+            if(n%i==0){
+                ans = false;
+                return ans;
+            }
+        }
+        return ans ;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number to check : ");
+        int a = sc.nextInt();
+        System.out.print("Is a given number prime : " + checkPrime(a) );
+
+
+    }
+}
+----------------------------------------------------------------------------------------
+
+
+OUTPUT :- 
+Enter number to check : 23
+Is a given number prime : true
+Process finished with exit code 0
