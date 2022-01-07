@@ -1,0 +1,31 @@
+//Linear Search in JAVA
+
+import java.util.*;
+
+public class Linear_Search {
+    //function for linear search
+    public static boolean check(int[] arr , int element,int size){
+        boolean is_element_present = true;
+        for(int i =0; i<size;i++){
+            if(arr[i] == element){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // reading input in an array
+        System.out.println("Enter the size of an array : ");
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+        for(int i =0; i<size ; i++){
+            arr[i] = sc.nextInt();
+        }
+        System.out.print("Enter element to search ");
+        int element = sc.nextInt();
+        System.out.print("is element present  : " + check(arr,element,size));
+
+
+    }
+}
