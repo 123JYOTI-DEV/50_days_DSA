@@ -1,0 +1,32 @@
+package LoveBabbar_DSA;
+import java.util.*;
+
+public class Pattern_6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int i = 1;
+        while(i<=n){
+            int j = 1;
+            while(j<=i){
+                System.out.print("*");
+                j=j+1;
+            }
+            System.out.println();
+            i=i+1;
+
+        }
+    }
+}
+ 
+
+
+OUTPUT :- 
+4
+*
+**
+***
+****
+
+Process finished with exit code 0
+
