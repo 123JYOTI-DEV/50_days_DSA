@@ -1,0 +1,49 @@
+public class Search_In_Rotated_Array {
+    public static int pivot(int[] arr,int size){   // function for finding pivot
+        int s = 0;
+        int e=size-1;
+        int mid = s +(e-s)/2;
+        while(s<e){
+            if(arr[mid] >= arr[0]){
+                s = mid+1;
+            }
+            else {
+                e = mid;
+            }
+            mid = s+(e-s)/2;
+        }
+        return s;
+    }
+    public static int binary(int[] arr ,int size ,int s, int e , int key){
+        int mid = s + (e-s)/2;
+        while(s<=e){
+            if(arr[mid] == key){
+               return mid;
+            }
+            if(key <arr[mid]){
+                e = mid -1;
+            }
+            if(key>arr[mid]){
+                s = mid+1;
+            }
+            mid = s+(e-s)/2;
+        }
+        return -1 ;
+    }
+    public static void main(String[] args) {
+        int[] arr = {7,9,1,2,3};
+        int size =5;
+        int search_element=3 ;
+        int pivot = pivot(arr,size);
+        // Logic for searching in the rotated array
+        if(search_element>=arr[pivot] && search_element <=arr.length-1){
+
+            // binary search on 2nd line
+            System.out.println( binary(arr,5,pivot,size-1,search_element));
+        }
+        else
+            //binary search on first line
+            System.out.println( binary(arr,5,0,pivot,search_element));
+    }
+}
+
