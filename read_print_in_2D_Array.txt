@@ -1,0 +1,45 @@
+//Taking input from User in 2D array
+
+import java.util.Scanner;
+public class TwoDArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter no of rows");
+        int a = sc.nextInt();
+        System.out.println("enter no of columns ");
+        int b = sc.nextInt();
+        int total_no_of_element=(a*b);
+        System.out.println("Enter " + total_no_of_element + " elements in a row ");
+        int[][] arr= new int[a][b];
+        for(int i =0; i<a;i++){
+            for(int j =0; j<b;j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        sc.close();
+        System.out.println("Elements in the 2-D array are:");
+        for(int i =0;i<a;i++){
+            for(int j =0; j<b;j++){
+                System.out.print(arr[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+    }
+}
+
+
+//OUTPUT:)
+
+enter no of rows
+2
+enter no of columns 
+3
+Enter 6 elements in a row 
+1 2 3 4 5 6
+Elements in the 2-D array are:
+1	2	3	
+4	5	6	
+
+Process finished with exit code 0
+
